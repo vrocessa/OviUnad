@@ -11,7 +11,6 @@
 html {
   line-height: 1.15; /* 1 */
   -webkit-text-size-adjust: 100%; /* 2 */
-  font-family: "Tahoma";
 }
 
 /* Sections
@@ -28,23 +27,65 @@ body {
   /*color: #096FFA;*/
 }
 
+/* A CONTINUACIÓN CREAREMOS EL HEADER PRINCIPAL, DONDE IRÁ EL TITULO DE SEGURIDAD INFORMATICA, JUNTO CON LA IMAGEN
+CON EL LOGO DE LA UNAD*/
 #headerPrincipal {
   background: #F4AF00;
   margin-left: 20px;
-  margin-top: 5px;
-  margin-bottom: 5px;  
-  margin-right: 20px;
+  margin-right: 20px; 
   border-radius: 0.5em;
   background: url('../img/header.png') no-repeat;
+    
 }
 
+/* LAS SIGUIENTES 5 OPCIONES DEL HEADER DE OPCIONES, ESTABLECERÁN LAS PROPIEDADES QUE SE MANEJAN EN EL MENÚ PRINCIPAL
+JUNTO CON LA ANIMACIÓN DE LOS SUBITEMS*/
 #headerOpciones {
   background: #2A607A;
   margin-left: 20px;
-  margin-top: 5px;
-  margin-bottom: 5px;
-  margin-right: 20px;
+  width: auto;
+  height: 50px;
+  margin-right: 20px; 
   border-radius: 0.5em;
+  display: flex;
+  justify-content: flex-start;
+
+}
+
+#headerOpciones ul{
+  display: flex;
+  list-style: none;
+}
+
+#headerOpciones ul li a{
+  display: block;
+  padding: 10px 10px;
+  text-decoration: none;
+}
+
+#headerOpciones ul ul{
+  display: block;
+  background: #2A607A;
+  position: absolute;
+  top: 185px;
+  border-radius: 0.5em;
+  transform: translateX(60%);
+  opacity: 0;
+  transition: all .6s;
+}
+
+
+#headerOpciones ul li:hover ul{
+  opacity: 1;
+  transform: translate(0%);
+}
+
+#listaOpcionesPrincipales{
+     display:inline;
+     /*padding-left:20px;
+     padding-right:20px;*/
+     cursor:pointer;
+     
 }
 
 
@@ -67,19 +108,38 @@ h1 {
 }
 
 h2 {
+  font-family: Lucida Fax;
+  font-size: 20px;
   margin-left: 20px;
   margin-right: 20px;
 }
 
-h3{
+h3 {
+  font-family: Helvetica;
   color: #030303;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
-#listaOpcionesPrincipales li {
-     display:inline;
-     padding-left:10px;
-     padding-right:10px;
+h4 {
+  font-family: Helvetica;
+  color: #FFFFFF;
+  margin-left: 20px;
+  margin-right: 20px;
+  font-size: 18px;
 }
+
+h5 {
+  font-family: Helvetica;
+  color: #000000;
+  margin-left: 20px;
+  margin-right: 20px;
+  font-size: 18px;
+}
+
+
+
+  
 
 a { 
   color: #FFFF00; 
@@ -93,8 +153,22 @@ a {
   margin-left: 20px;
   margin-right: 20px;
   border-radius: 0.5em;
-  /*margin-top: 20px;*/
+  /*margin-top: 50px;*/
   overflow: hidden;
+
+
+}
+
+
+
+
+#contenedorNegro
+{
+  overflow: hidden;
+  margin-left: 20px;
+  margin-right: 20px;
+  border-radius: 0.5em;
+  background: #EAEAEA;
 }
 
 
@@ -107,14 +181,14 @@ article{
 }
 
 
-.bloque-derecha{
+.bloque-derecha-superior{
   background: #EEEEEE;
   margin-top: -40px;
   float: right;
   width: 290px;
 }
 
-.bloque-derecha .titulo{
+.bloque-derecha-superior .titulo{
   background: #1d1d1d;
   color: #FFFFFF;
   height: 50px;
@@ -124,30 +198,80 @@ article{
 }
 
 
-.bloque-derecha section{
-  /*background: url('../img/IconoFacebook.png') no-repeat;*/
-  height: 250px;
+.bloque-derecha-superior section{
+  height: 90px;
   width: 100%;
 }
 
-.integrantes {
+.bloque-derecha-inferior{
+  background: #EEEEEE;
+  margin-top: -40px;
+  float: right;
+  width: 290px;
+}
+
+.bloque-derecha-inferior .titulo{
+  background: #1d1d1d;
+  color: #FFFFFF;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  width: 100%;
+}
+
+
+.bloque-derecha-inferior section{
+  /*background: url('../img/IconoFacebook.png') no-repeat;*/
+  height: 90px;
+  width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*.integrantes {
   font-size: 14;
   position: relative;
   margin-left: 20px;
 }
 
-.mapa {
+/*.mapa {
   font-size: 75%;
   position: relative;
   float: right;
 }
 
-
-.compartir {
+/*.compartir {
   position: relative;
   float: left;
-}
-
+}*/
 
 /* Grouping content
    ========================================================================== */
